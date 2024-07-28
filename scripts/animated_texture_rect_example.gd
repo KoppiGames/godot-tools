@@ -18,5 +18,4 @@ func _process(delta: float) -> void:
 	frame_text.text = str(animated_texture_rect.frame)
 
 func _on_speed_change(speed: float):
-	print(speed)
 	animation_player.speed_scale = speed

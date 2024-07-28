@@ -5,9 +5,24 @@
 [ext_resource type="Script" path="res://tools/animated_texture_rect.gd" id="3_offq8"]
 [ext_resource type="Theme" uid="uid://fotrgufx3yfs" path="res://themes/theme.tres" id="4_5452a"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c2wt8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2s25"]
 atlas = ExtResource("2_qh8lb")
 region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="Animation" id="Animation_tux3b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/AnimatedTextureRect:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_va8kt"]
 resource_name = "coin"
@@ -24,21 +39,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_tux3b"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/AnimatedTextureRect:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_35qyb"]
@@ -146,7 +146,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="AnimatedTextureRect" type="TextureRect" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_c2wt8")
+texture = SubResource("AtlasTexture_a2s25")
 stretch_mode = 5
 script = ExtResource("3_offq8")
 animation_texture = ExtResource("2_qh8lb")
