@@ -1,0 +1,156 @@
+[gd_scene load_steps=6 format=3 uid="uid://1mu3n1op1gru"]
+
+[ext_resource type="Script" path="res://scripts/key_display_example.gd" id="1_f6spt"]
+[ext_resource type="Texture2D" uid="uid://sg72cxcjndfn" path="res://assets/keyboard.png" id="1_l3wph"]
+[ext_resource type="Script" path="res://tools/key_display.gd" id="2_wr0m8"]
+[ext_resource type="Theme" uid="uid://fotrgufx3yfs" path="res://themes/theme.tres" id="4_df14j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w51c"]
+atlas = ExtResource("1_l3wph")
+region = Rect2(0, 0, 15, 16)
+
+[node name="KeyDisplayExample" type="Control" node_paths=PackedStringArray("key_display", "key_dropdown", "pressed_checkbox")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6spt")
+key_display = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/KeyDisplay")
+key_dropdown = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/OptionButton")
+pressed_checkbox = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/CheckBox")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Bar" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25098, 0.266667, 0.298039, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Bar"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/Bar/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Key Display"
+
+[node name="Items" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Items/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.207843, 0.239216, 0.290196, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Items/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.12549, 0.145098, 0.176471, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="KeyDisplay" type="TextureRect" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_0w51c")
+stretch_mode = 5
+script = ExtResource("2_wr0m8")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Key
+"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_df14j")
+theme_override_font_sizes/font_size = 10
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Key Pressed
+"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_df14j")
+button_pressed = true
+alignment = 1
+icon_alignment = 1

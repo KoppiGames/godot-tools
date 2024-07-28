@@ -1,0 +1,60 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://fotrgufx3yfs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72jnc"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gnme"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdqdf"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkdl6"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6rfa"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmgn1"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wfxa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6xa2"]
+bg_color = Color(0.283345, 0.322508, 0.386132, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btisv"]
+bg_color = Color(0.207843, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvdmf"]
+bg_color = Color(0.276544, 0.315052, 0.377615, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ynre"]
+bg_color = Color(0.207843, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yly7g"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2ytu"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[resource]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.439216, 0.729412, 0.984314, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_72jnc")
+Button/styles/normal = SubResource("StyleBoxFlat_6gnme")
+Button/styles/pressed = SubResource("StyleBoxFlat_cdqdf")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_fkdl6")
+CheckBox/styles/pressed = SubResource("StyleBoxFlat_k6rfa")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_kmgn1")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_6wfxa")
+MenuButton/styles/hover = SubResource("StyleBoxFlat_v6xa2")
+MenuButton/styles/normal = SubResource("StyleBoxFlat_btisv")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_tvdmf")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_0ynre")
+TextEdit/colors/font_readonly_color = Color(1, 1, 1, 1)
+TextEdit/constants/line_spacing = 1
+TextEdit/font_sizes/font_size = 10
+TextEdit/styles/normal = SubResource("StyleBoxFlat_yly7g")
+TextEdit/styles/read_only = SubResource("StyleBoxFlat_e2ytu")
