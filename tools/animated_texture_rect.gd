@@ -4,27 +4,27 @@ extends TextureRect
 
 signal value_change
 
-@export_group("Animation")
+## The animated Texture2D resource
 @export var animation_texture: Texture2D:
 	set(new_animation_texture):
 		animation_texture = new_animation_texture
 		_on_value_change("animation_texture", new_animation_texture)
+@export_group("Animation")
+## The number of columns in the sprite sheet
 @export var h_frames: int = 1:
 	set(new_h_frames):
 		h_frames = new_h_frames
 		_on_value_change("h_frames", new_h_frames)
+## The number of rows in the sprite sheet
 @export var v_frames: int = 1:
 	set(new_v_frames):
 		v_frames = new_v_frames
 		_on_value_change("v_frames", new_v_frames)
+## Current frame to display from sprite sheet. hframes or vframes must be greater than 1. 
 @export var frame: int:
 	set(new_frame):
 		frame = new_frame
 		_on_value_change("frame", new_frame)
-@export var frame_coords: Vector2:
-	set(new_frame_coords):
-		frame_coords = new_frame_coords
-		_on_value_change("frame_coords", new_frame_coords)
 
 var atlas_texture: AtlasTexture
 var texture_size: Vector2

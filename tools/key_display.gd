@@ -1,10 +1,10 @@
 @tool
-
 class_name KeyDisplay
 extends TextureRect
 
 signal value_change
 
+## Key to be rendered
 @export_enum("UP", "DOWN", "LEFT", "RIGHT", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12",
 						 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", 
 						 "V", "W", "X", "Y", "Z", "PERIOD", "COMMA", "QUESTION", "SLASH", "BACKSLASH", "SEMICOLON", "APOSTROPHE", 
@@ -13,16 +13,23 @@ var key: String = "UP":
 	set(new_key):
 		key = new_key
 		_on_value_change("key", new_key)
+
+## Determines if the key is rendered as pressed
 @export var is_pressed: bool = false:
 	set(new_value):
 		is_pressed = new_value
 		_on_value_change("is_pressed", new_value)
-		
+
 @export_group("Settings")
+## Texture for regular keys
 @export var keyboard_texture: Texture2D = preload("res://assets/keyboard.png")
+## Texture for extra keys
 @export var keyboard_extras_texture: Texture2D = preload("res://assets/keyboard_extras.png")
+## Size of each key
 @export var key_size: int = 16
+## Number of vertical keys before pressed textures
 @export var key_pressed_offset: int = 7
+## Number of vertical extra keys before pressed textures
 @export var extra_key_pressed_offset: int = 4
 
 
