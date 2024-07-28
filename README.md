@@ -8,6 +8,8 @@ This repository contains two custom tools for Godot: **KeyDisplay** and **Animat
 
 `KeyDisplay` is a Godot tool that provides an easy way to render keys inside the UI. It uses textures from [dreammix](https://dreammix.itch.io/keyboard-keys-for-ui) for the showcase but can be adapted to any texture with code modifications.
 
+[Showcase](https://koppigames.itch.io/keydisplay)
+
 ![KeyDisplay Properties](./screenshots/key_display_properties.png)
 
 #### Properties
@@ -23,6 +25,8 @@ This repository contains two custom tools for Godot: **KeyDisplay** and **Animat
 ### AnimatedTextureRect
 
 `AnimatedTextureRect` provides an easy way to animate with spritesheets inside the UI.
+
+[Showcase](https://koppigames.itch.io/animatedtexturerect)
 
 ![AnimatedTextureRect Properties](./screenshots/animated_texture_rect_properties.png)
 
