@@ -6,7 +6,7 @@ This repository contains two custom tools for Godot: **KeyDisplay** and **Animat
 
 ### KeyDisplay
 
-[`KeyDisplay`](./tools/key_display_readme.md) is a Godot tool that provides an easy way to render keys inside the UI. It uses textures from [dreammix](https://dreammix.itch.io/keyboard-keys-for-ui) for the showcase but can be adapted to any texture with code modifications.
+[`KeyDisplay`](./tools/KeyDisplay) is a Godot tool that provides an easy way to render keys inside the UI. It uses textures from [dreammix](https://dreammix.itch.io/keyboard-keys-for-ui) for the showcase but can be adapted to any texture with code modifications.
 
 [DEMO](https://koppigames.itch.io/keydisplay)
 
