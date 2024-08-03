@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/animated_texture_rect_example.gd" id="1_n2xtk"]
 [ext_resource type="Texture2D" uid="uid://cqybogjcv2wmb" path="res://assets/coin.png" id="2_qh8lb"]
-[ext_resource type="Script" path="res://tools/animated_texture_rect.gd" id="3_offq8"]
+[ext_resource type="Script" path="res://tools/AnimatedTextureRect/animated_texture_rect.gd" id="3_offq8"]
 [ext_resource type="Theme" uid="uid://fotrgufx3yfs" path="res://themes/theme.tres" id="4_5452a"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a2s25"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx8wy"]
 atlas = ExtResource("2_qh8lb")
 region = Rect2(0, 0, 16, 16)
 
@@ -146,7 +146,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="AnimatedTextureRect" type="TextureRect" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_a2s25")
+texture = SubResource("AtlasTexture_kx8wy")
 stretch_mode = 5
 script = ExtResource("3_offq8")
 animation_texture = ExtResource("2_qh8lb")

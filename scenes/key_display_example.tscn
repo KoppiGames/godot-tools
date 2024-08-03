@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/key_display_example.gd" id="1_f6spt"]
 [ext_resource type="Texture2D" uid="uid://sg72cxcjndfn" path="res://assets/keyboard.png" id="1_l3wph"]
-[ext_resource type="Script" path="res://tools/key_display.gd" id="2_wr0m8"]
+[ext_resource type="Script" path="res://tools/KeyDisplay/key_display.gd" id="2_wr0m8"]
 [ext_resource type="Theme" uid="uid://fotrgufx3yfs" path="res://themes/theme.tres" id="4_df14j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0w51c"]
