@@ -47,6 +47,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_6gnme")
 Button/styles/pressed = SubResource("StyleBoxFlat_cdqdf")
 CheckBox/styles/normal = SubResource("StyleBoxFlat_fkdl6")
 CheckBox/styles/pressed = SubResource("StyleBoxFlat_k6rfa")
+LineEdit/font_sizes/font_size = 10
 LineEdit/styles/normal = SubResource("StyleBoxFlat_kmgn1")
 LineEdit/styles/read_only = SubResource("StyleBoxFlat_6wfxa")
 MenuButton/styles/hover = SubResource("StyleBoxFlat_v6xa2")
