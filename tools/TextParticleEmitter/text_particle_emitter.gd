@@ -191,3 +191,4 @@ func _on_preset_update():
 			# ONEUP preset: set gravity and velocity for particle effect
 			particle_material.initial_velocity_max = 24
 			particle_material.gravity = Vector3(0, -100, 0)
+			particle_material.spread = 180

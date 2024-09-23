@@ -9,8 +9,8 @@ particle_flag_disable_z = true
 initial_velocity_max = 24.0
 gravity = Vector3(0, -100, 0)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_y3qpp"]
-viewport_path = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/TextParticleEmitter/@SubViewport@346456")
+[sub_resource type="ViewportTexture" id="ViewportTexture_1vyhf"]
+viewport_path = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/TextParticleEmitter/@SubViewport@17302")
 
 [node name="TextParticleEmitterExample" type="Control" node_paths=PackedStringArray("text_particle_emitter", "text", "amount", "font_size", "preset_dropdown")]
 layout_mode = 3
@@ -115,7 +115,7 @@ position = Vector2(70, 71)
 scale = Vector2(1.03197, 1.26969)
 amount = 2
 process_material = SubResource("ParticleProcessMaterial_a3xxw")
-texture = SubResource("ViewportTexture_y3qpp")
+texture = SubResource("ViewportTexture_1vyhf")
 script = ExtResource("1_bp7ay")
 preset = 1
 
