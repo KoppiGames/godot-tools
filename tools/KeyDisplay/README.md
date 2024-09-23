@@ -3,9 +3,12 @@
 ### Overview
 The `KeyDisplay` node is responsible for rendering a specific keyboard key as an image. It supports both regular keys and extra keys, with customizable textures, sizes, and pressed states.
 
+> [!NOTE] 
+> All properties emit the `value_change` signal when modified.
+
 ### Properties
-- **key (String):** The specific key to be rendered. It can be one of many predefined keys (e.g., "UP", "A", "F1"). Changing this property triggers the `_on_value_change` method.
-- **is_pressed (bool):** Indicates whether the key is rendered in a pressed state. Changing this property also triggers the `_on_value_change` method.
+- **key (String):** The specific key to be rendered. It can be one of many predefined keys (e.g., "UP", "A", "F1").
+- **is_pressed (bool):** Indicates whether the key is rendered in a pressed state.
 - **keyboard_texture (Texture2D):** The texture used for rendering regular keys.
 - **keyboard_extras_texture (Texture2D):** The texture used for rendering extra keys.
 - **key_size (int):** The size of each key in pixels.

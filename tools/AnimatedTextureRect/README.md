@@ -3,11 +3,14 @@
 ### Overview
 The `AnimatedTextureRect` node extends `TextureRect` to display an animated texture using a sprite sheet. It allows for defining the number of frames horizontally and vertically, and selecting the current frame to display.
 
+> [!NOTE] 
+> All properties emit the `value_change` signal when modified.
+
 ### Properties
-- **animation_texture (Texture2D):** The animated texture resource. Changing this property triggers the `_on_value_change` method.
-- **h_frames (int):** The number of columns in the sprite sheet. Changing this property triggers the `_on_value_change` method.
-- **v_frames (int):** The number of rows in the sprite sheet. Changing this property triggers the `_on_value_change` method.
-- **frame (int):** The current frame to display from the sprite sheet. Either `h_frames` or `v_frames` must be greater than 1. Changing this property triggers the `_on_value_change` method.
+- **animation_texture (Texture2D):** The animated texture resource.
+- **h_frames (int):** The number of columns in the sprite sheet.
+- **v_frames (int):** The number of rows in the sprite sheet.
+- **frame (int):** The current frame to display from the sprite sheet. Either `h_frames` or `v_frames` must be greater than 1.
 
 ### Signals
 - **value_change:** Emitted when any of the properties (`animation_texture`, `h_frames`, `v_frames`, `frame`) are changed.
