@@ -1,0 +1,204 @@
+[gd_scene load_steps=6 format=3 uid="uid://dinxslsvgdf2m"]
+
+[ext_resource type="Script" path="res://tools/TextParticleEmitter/text_particle_emitter.gd" id="1_bp7ay"]
+[ext_resource type="Script" path="res://scripts/text_particle_emitter_example.gd" id="1_tp6eq"]
+[ext_resource type="Theme" uid="uid://fotrgufx3yfs" path="res://themes/theme.tres" id="2_2noi4"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a3xxw"]
+particle_flag_disable_z = true
+initial_velocity_max = 24.0
+gravity = Vector3(0, -100, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_y3qpp"]
+viewport_path = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/TextParticleEmitter/@SubViewport@346456")
+
+[node name="TextParticleEmitterExample" type="Control" node_paths=PackedStringArray("text_particle_emitter", "text", "amount", "font_size", "preset_dropdown")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tp6eq")
+text_particle_emitter = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer/TextParticleEmitter")
+text = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/TextEdit")
+amount = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/SpinBox")
+font_size = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer4/SpinBox")
+preset_dropdown = NodePath("VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer3/OptionButton")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Bar" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25098, 0.266667, 0.298039, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Bar"]
+z_index = 10
+z_as_relative = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/Bar/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Text Particle Emitter"
+
+[node name="Items" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Items/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.207843, 0.239216, 0.290196, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Items/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.12549, 0.145098, 0.176471, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="TextParticleEmitter" type="GPUParticles2D" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer"]
+position = Vector2(70, 71)
+scale = Vector2(1.03197, 1.26969)
+amount = 2
+process_material = SubResource("ParticleProcessMaterial_a3xxw")
+texture = SubResource("ViewportTexture_y3qpp")
+script = ExtResource("1_bp7ay")
+preset = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Text"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2noi4")
+text = "Example"
+scroll_fit_content_height = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Amount"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2noi4")
+value = 2.0
+rounded = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Font Size"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2noi4")
+min_value = 5.0
+max_value = 30.0
+value = 20.0
+rounded = true
+suffix = "px"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Preset"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Items/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2noi4")
+theme_override_font_sizes/font_size = 10
+selected = 1
+item_count = 3
+popup/item_0/text = "Custom"
+popup/item_0/disabled = true
+popup/item_1/text = "Oneup"
+popup/item_1/id = 1
+popup/item_2/text = "Explosion"
+popup/item_2/id = 2
