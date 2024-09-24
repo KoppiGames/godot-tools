@@ -4,8 +4,9 @@
 [ext_resource type="Script" path="res://scripts/text_particle_emitter_example.gd" id="1_tp6eq"]
 [ext_resource type="Theme" uid="uid://fotrgufx3yfs" path="res://themes/theme.tres" id="2_2noi4"]
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a3xxw"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ap2r1"]
 particle_flag_disable_z = true
+spread = 180.0
 initial_velocity_max = 24.0
 gravity = Vector3(0, -100, 0)
 
@@ -114,7 +115,7 @@ theme_override_constants/margin_bottom = 50
 position = Vector2(70, 71)
 scale = Vector2(1.03197, 1.26969)
 amount = 2
-process_material = SubResource("ParticleProcessMaterial_a3xxw")
+process_material = SubResource("ParticleProcessMaterial_ap2r1")
 texture = SubResource("ViewportTexture_1vyhf")
 script = ExtResource("1_bp7ay")
 preset = 1
